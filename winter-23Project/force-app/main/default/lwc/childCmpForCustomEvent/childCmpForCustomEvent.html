@@ -9,20 +9,28 @@
                 ></lightning-button>
             </lightning-layout-item>
             <lightning-layout-item padding="around-small">
-                <lightning-input 
-                    type="text" 
-                    label="Breed Name" 
-                    value={breedName}
-                    onchange={handleSearchNewBreed}
-                ></lightning-input>
-                
+                <lightning-layout>
+                    <lightning-layout-item size="4">
+                        <lightning-input 
+                        type="text" 
+                        label="Breed Name" 
+                        value={breedName}
+                        onchange={handleSearchNewBreed}
+                    ></lightning-input>
+                    <lightning-button size="4"
+                        variant="brand" 
+                        label="Search New Breed" 
+                        title="Search New Breed" 
+                        onclick={handleSearch} class="slds-m-left_x-small"
+                    ></lightning-button>
+                    </lightning-layout-item>
                 <lightning-button 
                     variant="brand" 
                     label="Search New Breed" 
                     title="Search New Breed" 
                     onclick={handleSearch} class="slds-m-left_x-small"
                 ></lightning-button>
-                
+            </lightning-layout>
                 <img src={currentImage} />
             </lightning-layout-item>
             <lightning-layout-item padding="around-small">
