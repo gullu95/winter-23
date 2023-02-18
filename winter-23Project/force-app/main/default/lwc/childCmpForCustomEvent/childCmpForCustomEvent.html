@@ -1,0 +1,37 @@
+<template>
+    <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <lightning-button 
+                    variant="brand" 
+                    label="Previous" 
+                    title="Previous" 
+                    onclick={handlePreviousClick} class="slds-m-left_x-small"
+                ></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-input 
+                    type="text" 
+                    label="Breed Name" 
+                    value={breedName}
+                    onchange={handleSearchNewBreed}
+                ></lightning-input>
+                
+                <lightning-button 
+                    variant="brand" 
+                    label="Search New Breed" 
+                    title="Search New Breed" 
+                    onclick={handleSearch} class="slds-m-left_x-small"
+                ></lightning-button>
+                
+                <img src={currentImage} />
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-button 
+                    variant="brand" 
+                    label="Next" 
+                    title="Next" 
+                    onclick={handleNextClick} class="slds-m-left_x-small"
+                ></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+</template>

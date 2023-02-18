@@ -1,0 +1,16 @@
+<template>
+    <lightning-card  title="Hello">
+        <div class="slds-p-horizontal_small">
+            <c-child-cmp-for-custom-event 
+                breed-name={breedName}
+                current-image={currentImageLink}
+                onprevious={handlePreviousButtonCE}
+                onnext={handleNextButtonCE}
+                onbreedsearch={handleBreedNameChangeCE}
+            ></c-child-cmp-for-custom-event>
+        </div>
+        <div slot="footer">
+
+        </div>
+    </lightning-card>
+</template>

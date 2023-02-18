@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  title="Progress Bar example">
+        <div class="slds-p-horizontal_small">
+            <lightning-progress-indicator current-step={currentStep} type="base" variant="base">
+                <lightning-progress-step label="Step 1" value="1"></lightning-progress-step>
+                <lightning-progress-step label="Step 2" value="2"></lightning-progress-step>
+                <lightning-progress-step label="Step 3" value="3"></lightning-progress-step>
+                <lightning-progress-step label="Step 4" value="4"></lightning-progress-step>
+            </lightning-progress-indicator>
+            <lightning-button variant="brand" 
+                label="Next" title="Primary action" 
+                onclick={handleNext} class="slds-m-left_x-small"
+            ></lightning-button>
+            <lightning-button variant="brand" 
+                label="Previous" title="Primary action" 
+                onclick={handlePrevious} class="slds-m-left_x-small"
+            ></lightning-button>
+            
+            <br/>
+            <c-child-component step-value={currentStep} ></c-child-component>
+        </div>
+        
+    </lightning-card>
+</template>

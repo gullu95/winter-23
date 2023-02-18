@@ -1,0 +1,6 @@
+<aura:component >
+	<aura:attribute name="firstName_child" type="String" />
+    Value in Child: {!v.firstName_child}
+    <br/>
+    <lightning:input name="input1" label="Enter some text for Child" value="{!v.firstName_child}"/>
+</aura:component>

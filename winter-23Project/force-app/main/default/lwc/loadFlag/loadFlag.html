@@ -1,0 +1,43 @@
+<template>
+
+    <select class="gender">
+  <option>male</option>
+  <option>female</option>
+  <option>others</option>
+</select>  
+
+    <select>
+        <option value="Canada">🇨🇦 Canada +1</option>
+        <option value="Russia">🇷🇺 Russia +7</option>
+        <option value = "United States" selected>🇺🇸 United States +1 </option>
+    </select>
+
+
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click">
+    <button class="slds-button slds-button_icon-border-filled" aria-haspopup="true" onclick={toggleDropdown}>
+      <lightning-icon icon-name="utility:down" size="x-small" variant="bare"></lightning-icon>
+    </button>
+    <div class={dropdownClass} role="menu">
+      <ul class="slds-dropdown__list">
+        <li class="slds-dropdown__item" role="presentation">
+          <a href="javascript:void(0);" role="menuitem" tabindex="0" onclick={selectOption1}>
+            <lightning-icon icon-name="utility:check" size="x-small" variant="bare"></lightning-icon>
+            Option 1
+          </a>
+        </li>
+        <li class="slds-dropdown__item" role="presentation">
+          <a href="javascript:void(0);" role="menuitem" tabindex="-1" onclick={selectOption2}>
+            <lightning-icon icon-name="utility:close" size="x-small" variant="bare"></lightning-icon>
+            Option 2
+          </a>
+        </li>
+        <li class="slds-dropdown__item" role="presentation">
+          <a href="javascript:void(0);" role="menuitem" tabindex="-1" onclick={selectOption3}>
+            <lightning-icon icon-name="utility:settings" size="x-small" variant="bare"></lightning-icon>
+            Option 3
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,66 @@
+<template>
+    <lightning-card title="SF - MULESOFT - SAP Example" icon-name="custom:custom14">
+        <!-- BUTTON -->
+        <lightning-button variant="destructive-text" 
+            label="Decline" 
+            title="Destructive action with a lighter look" 
+            class="slds-m-left_x-small"
+            slot="actions"
+        ></lightning-button>
+        <lightning-button variant="success" 
+            label="Approve" title="Successful action" 
+            onclick={handleApprove} class="slds-m-left_x-small"
+            slot="actions"
+        ></lightning-button>
+        <div class="slds-m-around_medium">
+            <!--
+            <p>
+                Use the buttons below to subscribe and unsubscribe to a
+                streaming channel!
+            </p>
+            <lightning-input
+                label="Channel Name"
+                value={channelName}
+                onchange={handleChannelName}
+            ></lightning-input>
+            <lightning-button
+                variant="success"
+                label="Subscribe"
+                title="Subscribe"
+                onclick={handleSubscribe}
+                disabled={isSubscribeDisabled}
+                class="slds-m-left_x-small"
+            ></lightning-button>
+            <lightning-button
+                variant="destructive"
+                label="Unsubscribe"
+                title="Unsubscribe"
+                onclick={handleUnsubscribe}
+                disabled={isUnsubscribeDisabled}
+                class="slds-m-left_x-small"
+            ></lightning-button>
+            -->
+            <lightning-record-edit-form
+                object-api-name={objectApiName}
+                record-id={recordId}
+            >
+                <lightning-output-field field-name="Name"> </lightning-output-field>
+                <lightning-output-field field-name="Phone"> </lightning-output-field>
+                <lightning-output-field field-name="Email"> </lightning-output-field>
+                <lightning-output-field field-name="Street"> </lightning-output-field>
+                <lightning-output-field field-name="City"> </lightning-output-field>
+                <lightning-input-field field-name="Country"> </lightning-input-field>
+
+                
+                <!--BUTTON -->
+                <lightning-button variant="Brand" 
+                    label="Update Country" 
+                    title="Destructive action with a lighter look" 
+                    class="slds-m-left_x-small"
+                    type="submit"
+                ></lightning-button>
+            </lightning-record-edit-form>
+        </div>
+        
+    </lightning-card>
+</template>

@@ -1,0 +1,14 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:attribute name="firstName" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.init}"/>
+    
+    
+    <lightning:card footer="Card Footer" title="Aura Example">
+        <div class="slds-p-horizontal_small">
+            {!v.firstName}
+            <lightning:input name="input1" label="Enter some text" value="{!v.firstName}"/>
+            <c:HelloWorldChildComponent firstName_child="{!v.firstName}"/>
+        </div>
+    </lightning:card>
+</aura:component>
